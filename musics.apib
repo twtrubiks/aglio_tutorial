@@ -1,0 +1,163 @@
+## Music List [/api/music/]
+A list of musics 
+
+### Create Music [POST] 
+ create music
+
++ Request with body (application/json)
+
+    + Body
+
+            {
+                "song": "test_song" ,
+                "singer": "test_singer"
+            }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "id": 100057,
+                "song": "test_song",
+                "singer": "test_singer",
+                "last_modify_date": "06/07/2017 02:45",
+                "created": "06/07/2017"
+            }
+
+## Get Musics Use Server-Side [/api/music/{?draw,length,start}]
+get musics use server-side
+
++ Parameters
+
+    + draw: `1` (string, required) - draw
+    + length: `10` (string, required) - length
+    + start: `0` (string, required) - start
+
+### Get Musics Use Server-Side [GET] 
+get musics use server-side
+
+::: note
+## Note 
+datatables server-side parameters reference 
+
+[https://datatables.net/manual/server-side](https://datatables.net/manual/server-side)
+:::
+
++ Response 200
+
+    + Body
+
+            {
+                "draw": 1,
+                "recordsFiltered": 100049,
+                "data": [{
+                    "id": 7,
+                    "song": "1s",
+                    "singer": "11",
+                    "last_modify_date": "06/07/2017 08:02",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 9,
+                    "song": "s",
+                    "singer": "1s",
+                    "last_modify_date": "06/07/2017 07:57",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 10,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 01:58",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 11,
+                    "song": "s",
+                    "singer": "11",
+                    "last_modify_date": "05/12/2017 04:07",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 12,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 02:00",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 13,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 02:00",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 14,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 02:00",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 15,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 02:00",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 16,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 02:00",
+                    "created": "05/09/2017"
+                }, {
+                    "id": 17,
+                    "song": "s",
+                    "singer": "1",
+                    "last_modify_date": "05/09/2017 02:00",
+                    "created": "05/09/2017"
+                }],
+                "recordsTotal": 100049
+            }
+
+## Music  [/api/music/{id}/]
+get music
+
++ Parameters
+    + id : `50` (integer, required) -  music id
+
+### Get Music [GET]  
+get music
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "song": "test_name",
+                "singer": "test"        
+            }
+
+### Update Music [PUT]    
+update music
+
++ Request  (application/json)
+
+    + Body
+
+            {
+                "song": "test_song_update",
+                "singer": "test_singer_update"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 50,
+                "song": "test_song_update",
+                "singer": "test_singer_update",
+                "last_modify_date": "06/07/2017 02:46",
+                "created": "06/07/2017"
+            }
+    
+### Delete Music [DELETE]
+delete  music
+
++ Response 204
