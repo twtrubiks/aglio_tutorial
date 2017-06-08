@@ -18,7 +18,9 @@ aglio tutorial
 
 [django_rest_framework_swagger_tutorial](https://github.com/twtrubiks/django_rest_framework_swagger_tutorial)
 
-但今天的主角是 [aglio](https://github.com/danielgtaylor/aglio)  自由度更高！！
+但今天的主角是 [aglio](https://github.com/danielgtaylor/aglio)
+
+ 自由度更高！！
 
 ## 安裝環境
 
@@ -42,20 +44,26 @@ Commandline executable
 要將 **.apib** 邊譯為 **.html** , 可以執行
 
 ```cmd
-aglio -i service.apib -o api.html
+aglio -i index.apib -o index.html
 ```
 
-那你現在一定在想, 每次都要重新編譯超級麻煩，但不用擔心，
+那你現在一定在想，每次都要重新編譯超級麻煩 :angry:，但請不用擔心，
 
 我們可以使用 **Live-reloading preview server**
 
 ( 也就是即時觀看，改什麼立即可以看到結果 )
 
 ```cmd
-aglio -i service.apib --server
+aglio -i index.apib --server
 ```
 
+![](http://i.imgur.com/9AyeIyS.png)
+
 接下來我們只需要去瀏覽 [http://localhost:3000/](http://localhost:3000/) 就可以即時看到修改的內容。
+
+***注意***
+
+有時候在編譯，會提醒你錯誤，請把錯誤都修正，避免不必要的問題
 
 ## 其他功能介紹
 
@@ -70,6 +78,12 @@ aglio -i service.apib --server
 [https://github.com/danielgtaylor/aglio#installation--usage](https://github.com/danielgtaylor/aglio#installation--usage)
 
 ## 執行畫面
+
+依照 [DRF-dataTable-Example-server-side](https://github.com/twtrubiks/DRF-dataTable-Example-server-side) 這篇文章下去設計 API
+
+可以參考我的 [index.html](https://github.com/twtrubiks/aglio_tutorial/blob/master/index.html)，直接用瀏覽器開啟即可 :smile:
+
+![](http://i.imgur.com/xOe8qsD.png)
 
 畫面蠻漂亮的，也有很多種 theme 可以選擇
 
@@ -86,7 +100,9 @@ API 文件  | 優點                  |  缺點
  Aglio   | 自訂性高且支援 Markdown | 不可以直接測試 API
  Swagger | 可以直接測試 API        | 自訂性較低
 
-其實說穿了，還是要看自己的需求，如果需要自訂性比較高的，那一定就是選 [aglio](https://github.com/danielgtaylor/aglio) ; 相反的，假如需要可以直接測試且自動的幫你生成，就選 Swagger ( 自訂性較低 )。
+其實說穿了，還是要看自己的需求，如果需要自訂性比較高的，那一定就是選 [aglio](https://github.com/danielgtaylor/aglio) ;
+
+相反的，假如需要可以直接測試且自動的幫你生成，就選 Swagger ( 自訂性較低 )。
 
 所以說依照當下的需求下去選擇撰寫 **API 文件** 的工具絕對沒錯！！
 
