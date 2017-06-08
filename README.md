@@ -1,10 +1,8 @@
 # aglio-tutorial
 
-aglio tutorial
-
  aglio 基本教學
 
-* [Youtube Tutorial]()
+* [Youtube Tutorial](https://youtu.be/93takOJoZkk)
 
 相信大家在網路上一定都看過 **API 文件**，
 
